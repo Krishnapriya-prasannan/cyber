@@ -4,6 +4,7 @@ import ServiceHero from '../Components/Service/SHero';
 import OurServices from '../Components/Service/OurService';
 import PricingSection from '../Components/Price';
 import CyberThreatBanner from '../Components/Banner';
+import Footer from '../Components/Footer';
 const ServicePage = () => {
   return (
     <div>
@@ -12,6 +13,7 @@ const ServicePage = () => {
        <OurServices />
        <PricingSection />
        <CyberThreatBanner />
+       <Footer/>
     </div>
       
   );

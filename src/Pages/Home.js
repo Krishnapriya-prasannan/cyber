@@ -8,6 +8,7 @@ import Expertise from '../Components/Home/Expertise';
 import Testimonials from '../Components/Home/Testimonials';
 import PricingSection from '../Components/Price';
 import CyberThreatBanner from '../Components/Banner';
+import Footer from '../Components/Footer';
 const HomePage = () => {
   return (
     <div>
@@ -19,7 +20,7 @@ const HomePage = () => {
       <PricingSection />
       <CyberThreatBanner />
       <Testimonials />
-      ,
+      <Footer />
     </div>
   );
 };
