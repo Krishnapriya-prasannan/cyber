@@ -60,7 +60,7 @@ return (
                         transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
                         className="flex items-center space-x-6"
                     >
-                        <div className="bg-gradient-to-b from-violet-600 via-pink-300 to-white p-2 rounded-full">
+                        <div className="bg-gradient-to-b from-violet-900 via-violet-400 to-pink-300 p-2 rounded-full">
                             <img
                                 src={icon1}
                                 alt="24/7 Monitoring"
@@ -80,7 +80,7 @@ return (
                         transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
                         className="flex items-center space-x-6"
                     >
-                        <div className="bg-gradient-to-b from-violet-600 via-pink-300 to-white p-2 rounded-full">
+                        <div className="bg-gradient-to-b from-violet-900 via-violet-400 to-pink-300 p-2 rounded-full">
                             <img
                                 src={icon5}
                                 alt="Certified Professionals"

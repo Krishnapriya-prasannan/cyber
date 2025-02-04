@@ -36,7 +36,7 @@ export default function OurServices() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-            className="bg-[#0b0618] p-8 h-64 rounded-2xl shadow-lg text-left flex flex-col justify-between"
+            className="bg-[#0b0618] p-8 h-80 rounded-2xl shadow-lg text-left flex flex-col justify-between border-2 border-transparent hover:border-violet-400 hover:shadow-[0_0_15px_rgba(138,43,226,0.5)] transition-all duration-300 ease-in-out"
           >
             <FaShieldAlt className="text-violet-400 text-5xl" />
             <h3 className="text-3xl font-semibold text-white mt-8">Network Security</h3>
@@ -50,7 +50,7 @@ export default function OurServices() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-            className="bg-[#0b0618] p-8 h-64 rounded-2xl shadow-lg text-left flex flex-col justify-between"
+            className="bg-[#0b0618] p-8 h-80 rounded-2xl shadow-lg text-left flex flex-col justify-between border-2 border-transparent hover:border-violet-400 hover:shadow-[0_0_15px_rgba(138,43,226,0.5)] transition-all duration-300 ease-in-out"
           >
             <FaBug className="text-violet-400 text-5xl" />
             <h3 className="text-3xl font-semibold text-white mt-8">Penetration Testing</h3>
@@ -64,7 +64,7 @@ export default function OurServices() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
-            className="bg-[#0b0618] p-8 h-64 rounded-2xl shadow-lg text-left flex flex-col justify-between"
+            className="bg-[#0b0618] p-8 h-80 rounded-2xl shadow-lg text-left flex flex-col justify-between border-2 border-transparent hover:border-violet-400 hover:shadow-[0_0_15px_rgba(138,43,226,0.5)] transition-all duration-300 ease-in-out"
           >
             <FaExclamationTriangle className="text-violet-400 text-5xl" />
             <h3 className="text-3xl font-semibold text-white mt-8">Incident Response</h3>
