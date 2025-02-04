@@ -8,28 +8,24 @@ const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-[#0a0718] text-white px-6 sm:px-12 py-4 flex items-center justify-between shadow-md">
+    <nav className="fixed top-0 left-0 w-full z-50 text-white px-6 sm:px-12 py-4 flex items-center justify-between shadow-md backdrop-blur-md">
       {/* Logo */}
       <div className="flex items-center space-x-2 ml-4">
-        <img src={hexLogo} alt="Logo" className="w-42 h-30" /> {/* Increased size */}
+        <img src={hexLogo} alt="Logo" className="w-42 h-30" />
       </div>
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex space-x-8 text-lg font-semibold flex-grow justify-center">
-        <a href="/" className="text-white hover:text-blue-900 transition">
-          Home
-        </a>
-        <a href="#" className="text-white hover:text-blue-900 transition">
-          About
-        </a>
+        <a href="/" className="hover:text-blue-900 transition">Home</a>
+        <a href="#" className="hover:text-blue-900 transition">About</a>
 
-        {/* Dropdown Menu with Animation */}
+        {/* Dropdown Menu */}
         <div
           className="relative"
-          onMouseEnter={() => setDropdownOpen(true)}  // Open dropdown on hover
-          onMouseLeave={() => setDropdownOpen(false)} // Close dropdown on mouse leave
+          onMouseEnter={() => setDropdownOpen(true)}
+          onMouseLeave={() => setDropdownOpen(false)}
         >
-          <button className="flex items-center text-white hover:text-violet-400 transition">
+          <button className="flex items-center hover:text-violet-400 transition">
             Pages <FaChevronDown className="ml-1 text-sm" />
           </button>
 
@@ -42,25 +38,19 @@ const Navbar = () => {
               transition={{ duration: 0.3 }}
               className="absolute top-full left-0 mt-2 w-40 bg-[#1a132b] shadow-md rounded-md"
             >
-              <a href="#" className="block px-4 py-2 text-white hover:text-violet-400 transition">
-                Page 1
-              </a>
-              <a href="#" className="block px-4 py-2 text-white hover:text-violet-400 transition">
-                Page 2
-              </a>
+              <a href="#" className="block px-4 py-2 hover:text-violet-400 transition">Page 1</a>
+              <a href="#" className="block px-4 py-2 hover:text-violet-400 transition">Page 2</a>
             </motion.div>
           )}
         </div>
 
-        <a href="/services" className="text-white hover:text-blue-900 transition">
-          Services
-        </a>
+        <a href="/services" className="hover:text-blue-900 transition">Services</a>
       </div>
 
       {/* Contact Button */}
       <a
         href="#"
-        className="hidden md:block border border-purple-500 text-white px-6 py-2 rounded-full hover:text-violet-500 transition"
+        className="hidden md:block border border-purple-500 px-6 py-2 rounded-full hover:text-violet-500 transition"
       >
         Contact
       </a>
@@ -76,20 +66,12 @@ const Navbar = () => {
       {/* Mobile Dropdown */}
       {isMobileMenuOpen && (
         <div className="absolute top-16 left-0 w-full bg-[#1a132b] text-white shadow-md md:hidden">
-          <a href="/" className="block px-6 py-3 text-white hover:text-blue-900 transition">
-            Home
-          </a>
-          <a href="#" className="block px-6 py-3 text-white hover:text-blue-900 transition">
-            About
-          </a>
+          <a href="/" className="block px-6 py-3 hover:text-blue-900 transition">Home</a>
+          <a href="#" className="block px-6 py-3 hover:text-blue-900 transition">About</a>
 
           {/* Mobile Dropdown for Pages */}
-          <div
-            className="relative"
-            onMouseEnter={() => setDropdownOpen(true)}  // Open dropdown on hover
-            onMouseLeave={() => setDropdownOpen(false)} // Close dropdown on mouse leave
-          >
-            <button className="w-full text-left px-6 py-3 flex justify-between items-center text-white hover:text-violet-400 transition">
+          <div className="relative">
+            <button className="w-full text-left px-6 py-3 flex justify-between items-center hover:text-violet-400 transition">
               Pages <FaChevronDown className="ml-1 text-sm" />
             </button>
 
@@ -101,22 +83,14 @@ const Navbar = () => {
                 transition={{ duration: 0.3 }}
                 className="w-full bg-[#27203d]"
               >
-                <a href="#" className="block px-6 py-2 text-white hover:text-violet-400 transition">
-                  Page 1
-                </a>
-                <a href="#" className="block px-6 py-2 text-white hover:text-violet-400 transition">
-                  Page 2
-                </a>
+                <a href="#" className="block px-6 py-2 hover:text-violet-400 transition">Page 1</a>
+                <a href="#" className="block px-6 py-2 hover:text-violet-400 transition">Page 2</a>
               </motion.div>
             )}
           </div>
 
-          <a href="/services" className="block px-6 py-3 text-white hover:text-blue-900 transition">
-            Services
-          </a>
-          <a href="#" className="block px-6 py-3 text-white hover:text-violet-500 transition">
-            Contact
-          </a>
+          <a href="/services" className="block px-6 py-3 hover:text-blue-900 transition">Services</a>
+          <a href="#" className="block px-6 py-3 hover:text-violet-500 transition">Contact</a>
         </div>
       )}
     </nav>
