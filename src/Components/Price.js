@@ -124,7 +124,7 @@ const PricingSection = () => {
 
       {/* Responsive "All Plans" Text with Animation */}
       <motion.p
-        className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-tight mt-16 mb-12 text-gray-300 max-w-4xl mx-auto"
+        className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-tight mt-16 mb-0 text-gray-300 max-w-4xl mx-auto"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
