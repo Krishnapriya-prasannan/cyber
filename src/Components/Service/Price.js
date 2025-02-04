@@ -16,7 +16,7 @@ const plans = [
       "24/7 email support",
     ],
     borderColor: "border-gray-600",
-    buttonStyle: "border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white",
+    buttonStyle: "border border-purple-500 text-purple-400 hover:border-purple-400 hover:text-white",
   },
   {
     title: "Medium-Sized Businesses, Enhanced Security Needs",
@@ -44,7 +44,7 @@ const plans = [
       "Dedicated support",
     ],
     borderColor: "border-gray-600",
-    buttonStyle: "border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white",
+    buttonStyle: "border border-purple-500 text-purple-400 hover:border-purple-400 hover:text-white",
   },
 ];
 
