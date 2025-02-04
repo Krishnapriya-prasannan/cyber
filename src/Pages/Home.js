@@ -6,7 +6,8 @@ import Results from '../Components/Home/Results';
 import Ourservices from '../Components/Home/Ourservices';
 import Expertise from '../Components/Home/Expertise';
 import Testimonials from '../Components/Home/Testimonials';
-
+import PricingSection from '../Components/Price';
+import CyberThreatBanner from '../Components/Banner';
 const HomePage = () => {
   return (
     <div>
@@ -15,6 +16,8 @@ const HomePage = () => {
       <Results />
       <Ourservices />
       <Expertise />
+      <PricingSection />
+      <CyberThreatBanner />
       <Testimonials />
       ,
     </div>
