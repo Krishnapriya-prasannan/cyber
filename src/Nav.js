@@ -16,7 +16,7 @@ const Navbar = () => {
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex space-x-8 text-lg font-semibold flex-grow justify-center">
-        <a href="#" className="text-white hover:text-blue-900 transition">
+        <a href="/" className="text-white hover:text-blue-900 transition">
           Home
         </a>
         <a href="#" className="text-white hover:text-blue-900 transition">
@@ -52,7 +52,7 @@ const Navbar = () => {
           )}
         </div>
 
-        <a href="#" className="text-white hover:text-blue-900 transition">
+        <a href="/services" className="text-white hover:text-blue-900 transition">
           Services
         </a>
       </div>
@@ -76,7 +76,7 @@ const Navbar = () => {
       {/* Mobile Dropdown */}
       {isMobileMenuOpen && (
         <div className="absolute top-16 left-0 w-full bg-[#1a132b] text-white shadow-md md:hidden">
-          <a href="#" className="block px-6 py-3 text-white hover:text-blue-900 transition">
+          <a href="/" className="block px-6 py-3 text-white hover:text-blue-900 transition">
             Home
           </a>
           <a href="#" className="block px-6 py-3 text-white hover:text-blue-900 transition">
@@ -111,7 +111,7 @@ const Navbar = () => {
             )}
           </div>
 
-          <a href="#" className="block px-6 py-3 text-white hover:text-blue-900 transition">
+          <a href="/services" className="block px-6 py-3 text-white hover:text-blue-900 transition">
             Services
           </a>
           <a href="#" className="block px-6 py-3 text-white hover:text-violet-500 transition">
