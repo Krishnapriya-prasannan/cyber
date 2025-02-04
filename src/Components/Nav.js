@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion"; // Import for animation
-import hexLogo from "./assets/hex.svg";
+import hexLogo from "../assets/hex.svg";
 
 const Navbar = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);

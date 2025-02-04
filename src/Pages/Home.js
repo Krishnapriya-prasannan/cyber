@@ -1,6 +1,6 @@
 // src/Components/BeyondBio.js
 import React from 'react';
-import Navbar from '../Nav';
+import Navbar from '../Components/Nav';
 
 const HomePage = () => {
   return (
