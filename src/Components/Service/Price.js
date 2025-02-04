@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
 
 const plans = [
@@ -51,22 +52,35 @@ const plans = [
 const PricingSection = () => {
   return (
     <section className="py-24 bg-[#05030d] text-white text-center">
-      {/* Title */}
-      <h1 className="text-6xl md:text-7xl font-extrabold mb-12">
-        Choose the right plan for your{" "}
-        <span className="text-purple-400">business</span>
-      </h1>
+      {/* Responsive Title with Animation */}
+      <motion.h1
+        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-12"
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
+        Choose the{" "}
+        <span className="text-purple-300">right plan</span> for your{" "}
+        <span className="bg-gradient-to-r from-purple-500 via-purple-400 to-purple-300 text-transparent bg-clip-text">
+          business
+        </span>
+      </motion.h1>
 
-      {/* Pricing Cards */}
+      {/* Pricing Cards Container */}
       <div className="flex flex-wrap justify-center gap-10 px-6 md:px-12 mt-10">
         {plans.map((plan, index) => (
-          <div
+          <motion.div
             key={index}
             className={`flex flex-col justify-between p-12 rounded-xl bg-[#0b0618] w-[360px] sm:w-[400px] md:w-[440px] lg:w-[460px] min-h-[780px] relative transition-all duration-300 ease-out ${
               plan.highlight
                 ? "border border-purple-500 shadow-xl shadow-purple-500/40"
                 : `${plan.borderColor} hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/40`
             }`}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 1, delay: index * 0.2, ease: "easeOut" }}
           >
             {/* Hours & Price Alignment */}
             <div className="absolute top-6 left-6 flex flex-col items-start">
@@ -104,9 +118,22 @@ const PricingSection = () => {
                 Get started
               </button>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
+
+      {/* Responsive "All Plans" Text with Animation */}
+      <motion.p
+        className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-tight mt-16 mb-12 text-gray-300 max-w-4xl mx-auto"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
+        All plans come with a{" "}
+        <span className="text-purple-400 font-bold">14-day free trial</span> and{" "}
+        <span className="text-purple-400 font-bold">no long-term contracts.</span>
+      </motion.p>
     </section>
   );
 };
