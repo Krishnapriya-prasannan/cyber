@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaLock, FaPuzzlePiece, FaSync, FaShieldAlt, FaExclamationTriangle, FaCheckCircle } from "react-icons/fa";
 
 const services = [
@@ -37,18 +38,38 @@ const services = [
 const ServicesSection = () => {
   return (
     <section className="py-20 bg-[#05030d] text-white text-center">
-      <h1 className="text-6xl md:text-7xl font-extrabold mb-8">
+      {/* Title */}
+      <motion.h1
+        className="text-6xl md:text-7xl font-extrabold mb-8"
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
         Our <span className="text-purple-400">Services</span>
-      </h1>
-      <p className="text-gray-400 text-lg max-w-3xl mx-auto mb-12">
-        A well-organized website with a professional look. It offers detailed service descriptions, case studies, and easy navigation.
-      </p>
+      </motion.h1>
 
+      {/* Subtitle */}
+      <motion.p
+        className="text-gray-400 text-lg max-w-3xl mx-auto mb-12"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+      >
+        A well-organized website with a professional look. It offers detailed service descriptions, case studies, and easy navigation.
+      </motion.p>
+
+      {/* Service Cards */}
       <div className="flex flex-wrap justify-center gap-8 px-6 md:px-12">
         {services.map((service, index) => (
-          <div 
-            key={index} 
+          <motion.div
+            key={index}
             className="flex flex-col justify-between p-8 rounded-xl bg-[#0b0618] w-[380px] h-[400px] sm:w-[400px] sm:h-[420px] md:w-[420px] md:h-[430px] relative transition-all duration-300 ease-out hover:ease-in hover:duration-200 hover:border hover:border-purple-500 hover:-translate-y-3 hover:shadow-xl hover:shadow-purple-500/40"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 1, delay: index * 0.2, ease: "easeOut" }}
           >
             <div className="absolute top-6 left-6 flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#5b1166] to-purple-200">
               {service.icon}
@@ -57,7 +78,7 @@ const ServicesSection = () => {
               <h3 className="text-white text-2xl font-bold">{service.title}</h3>
               <p className="text-gray-300 text-base mt-3">{service.description}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
