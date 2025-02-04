@@ -1,21 +1,36 @@
 import React from "react";
-import { FaLock, FaPuzzlePiece, FaSync } from "react-icons/fa";
+import { FaLock, FaPuzzlePiece, FaSync, FaShieldAlt, FaExclamationTriangle, FaCheckCircle } from "react-icons/fa";
 
 const services = [
   {
     title: "Network Security",
     description: "Comprehensive solutions to protect your network infrastructure.",
-    icon: <FaLock className="text-5xl text-white" />, // Bigger Icon
+    icon: <FaLock className="text-5xl text-white" />,
   },
   {
     title: "Penetration Testing",
     description: "Identify vulnerabilities before hackers do.",
-    icon: <FaPuzzlePiece className="text-5xl text-white" />, // Bigger Icon
+    icon: <FaPuzzlePiece className="text-5xl text-white" />,
   },
   {
     title: "Incident Response",
     description: "Rapid response to contain and mitigate cyber incidents.",
-    icon: <FaSync className="text-5xl text-white" />, // Bigger Icon
+    icon: <FaSync className="text-5xl text-white" />,
+  },
+  {
+    title: "Vulnerability Assessment",
+    description: "Identify and evaluate security weaknesses to prevent exploitation.",
+    icon: <FaShieldAlt className="text-5xl text-white" />,
+  },
+  {
+    title: "Threat Detection & Response",
+    description: "Monitor and respond to security threats in real-time.",
+    icon: <FaExclamationTriangle className="text-5xl text-white" />,
+  },
+  {
+    title: "Compliance & Risk Management",
+    description: "Ensure regulatory compliance while managing security risks effectively.",
+    icon: <FaCheckCircle className="text-5xl text-white" />,
   },
 ];
 
@@ -33,9 +48,9 @@ const ServicesSection = () => {
         {services.map((service, index) => (
           <div 
             key={index} 
-            className="flex flex-col justify-between p-8 rounded-xl bg-[#0b0618] w-[380px] h-[320px] sm:w-[400px] sm:h-[340px] md:w-[420px] md:h-[360px] relative transition-all duration-300 ease-out hover:ease-in hover:duration-200 hover:border hover:border-purple-500 hover:-translate-y-3 hover:shadow-xl hover:shadow-purple-500/40"
+            className="flex flex-col justify-between p-8 rounded-xl bg-[#0b0618] w-[380px] h-[400px] sm:w-[400px] sm:h-[420px] md:w-[420px] md:h-[430px] relative transition-all duration-300 ease-out hover:ease-in hover:duration-200 hover:border hover:border-purple-500 hover:-translate-y-3 hover:shadow-xl hover:shadow-purple-500/40"
           >
-            <div className="absolute top-6 left-6 flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-purple-500 to-pink-500">
+            <div className="absolute top-6 left-6 flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#5b1166] to-purple-200">
               {service.icon}
             </div>
             <div className="mt-auto">
